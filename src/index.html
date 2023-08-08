@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path of Exile Overlay</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="renderer.js"></script>
+</head>
+<body>
+    <!-- Welcome Page Content -->
+    <div id="welcomePage" class="page">
+        <h1>Welcome to the Path of Exile Overlay</h1>
+        <p>This overlay helps you track your favorite items and their prices.</p>
+        <button onclick="navigate('searchPage')">Search for Items</button>
+    </div>
+
+    <!-- Search Page Content -->
+    <div id="searchPage" class="page" style="display:none">
+        <input type="text" placeholder="Search for items..." id="searchInput">
+        <button onclick="executeSearch()">Search</button>
+        <ul id="searchResults">
+            <!-- Items will be populated here based on the search -->
+        </ul>
+        <button onclick="navigate('welcomePage')">Back to Home</button>
+        <button onclick="navigate('favoritesPage')">View Favorites</button>
+    </div>
+
+    <!-- Favorites Page Content -->
+    <div id="favoritesPage" class="page" style="display:none">
+        <h1>Your Favorite Items</h1>
+        <ul id="favoriteItems">
+            <!-- Favorited items will be listed here -->
+        </ul>
+        <button onclick="navigate('welcomePage')">Back to Home</button>
+        <button onclick="navigate('searchPage')">Search for More Items</button>
+    </div>
+</body>
+</html>
